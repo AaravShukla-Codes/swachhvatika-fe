@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pickups · SWACHH VATIKA</title>
+
+<link rel="stylesheet" href="../static/css/variables.css">
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/layout.css">
+<link rel="stylesheet" href="../static/css/components.css">
+<link rel="stylesheet" href="../static/css/forms.css">
+<link rel="stylesheet" href="../static/css/tables.css">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="../static/css/chat.css">
+<link rel="stylesheet" href="../static/css/map.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+<link rel="stylesheet" href="../static/css/admin.css">
+</head>
+<body data-v="admin" data-role="admin">
+
+
+<div class="fx" aria-hidden="true"><u class="bl" style="left:-8%;top:8%"></u><u class="bl b2"></u><i class="lf" style="--x:6%;--s:26px;--o:0.5;--d:26s;--dl:-3s"></i><i class="lf" style="--x:16%;--s:18px;--o:0.35;--d:32s;--dl:-12s"></i><i class="lf" style="--x:28%;--s:34px;--o:0.45;--d:28s;--dl:-20s"></i><i class="lf" style="--x:41%;--s:20px;--o:0.3;--d:36s;--dl:-8s"></i><i class="lf" style="--x:55%;--s:28px;--o:0.5;--d:30s;--dl:-16s"></i><i class="lf" style="--x:68%;--s:16px;--o:0.35;--d:34s;--dl:-24s"></i><i class="lf" style="--x:80%;--s:32px;--o:0.45;--d:27s;--dl:-5s"></i><i class="lf" style="--x:92%;--s:22px;--o:0.3;--d:38s;--dl:-14s"></i><b class="pt" style="left:12%;--dl:-0s"></b><b class="pt" style="left:34%;--dl:-4s"></b><b class="pt" style="left:61%;--dl:-8s"></b><b class="pt" style="left:85%;--dl:-12s"></b></div>
+<header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#123524"/><path d="M9 22c0-8 6-13 15-13 0 9-5 15-13 15l-2 2z" fill="#5fcf80"/></svg>SWACHH<span>VATIKA</span></a>
+<nav id="nav" aria-label="Main"><a href="admin-dashboard.html"><i>🏠</i><span>Dashboard</span></a><a href="admin-complaints.html"><i>📋</i><span>Complaints</span></a><a href="admin-pickups.html" class="on" aria-current="page"><i>🚛</i><span>Pickups</span></a><a href="admin-tasks.html"><i>🗂️</i><span>Tasks</span></a><a href="admin-verification.html"><i>🔍</i><span>Verification</span></a><details class="more"><summary><i>⋯</i><span>More</span></summary><div class="menu"><a href="admin-workers.html"><i>🧑‍🔧</i><span>Workers</span></a><a href="admin-users.html"><i>👥</i><span>Users</span></a><a href="admin-tokens.html"><i>🪙</i><span>Token Management</span></a><a href="admin-analytics.html"><i>📊</i><span>Analytics</span></a><a href="admin-hotspots.html"><i>📍</i><span>Waste Hotspots</span></a><a href="admin-audit-logs.html"><i>🧾</i><span>Audit Logs</span></a><a href="admin-chat.html"><i>🤖</i><span>AI Assistant</span></a><a href="admin-notifications.html"><i>🔔</i><span>Notifications</span></a><a href="admin-profile.html"><i>👤</i><span>Profile</span></a></div></details></nav>
+<div class="rt"><button id="lb" type="button" title="Language" data-action="toggle-language">हिं</button><span id="usr" class="tag" data-current-user></span><button id="lg" type="button" data-action="logout">Logout</button></div></header>
+<main id="app-content">
+<div class="adm-h"><div><small>Approve, reject and assign</small><h2>Pickup Requests</h2></div><span class="tag ok"><i class="live"></i>Live</span></div><form class="card fbar" id="filter-form" role="search"><label>Search<input id="filter-search" name="filter-search" type="search" ></label><label>Status<select id="filter-status" name="filter-status"><option value="">All</option><option value="SUBMITTED">Submitted</option><option value="UNDER_REVIEW">Under Review</option><option value="APPROVED">Approved</option><option value="ASSIGNED">Assigned</option><option value="COMPLETED">Completed</option><option value="REJECTED">Rejected</option><option value="CANCELLED">Cancelled</option></select></label><button type="button" class="p" data-action="apply-filters">Apply</button></form><div class="card ov"><table class="tbl" id="pickups-table"><thead><tr><th scope="col">ID</th><th scope="col">Citizen</th><th scope="col">Waste Type</th><th scope="col">Preferred Date</th><th scope="col">Status</th><th scope="col">Created</th><th scope="col">Action</th></tr></thead><tbody id="pickups-body"></tbody></table></div><div class="card empty" id="pickups-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="pickups-empty" data-state="empty" hidden><span class="ic">🌿</span><p>No pickup requests found.</p></div><div class="card empty" id="pickups-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div><nav class="pager" id="pickups-pager" aria-label="Pagination"><button type="button" data-page="prev">Previous</button><span data-page-info>Page 1</span><button type="button" data-page="next">Next</button></nav>
+</main>
+<div id="toast" role="status"></div>
+<div id="loading-overlay" aria-hidden="true"><span class="spin"></span></div>
+<script src="../static/js/core/utils.js" defer></script>
+<script src="../static/js/core/api.js" defer></script>
+<script src="../static/js/core/auth.js" defer></script>
+<script src="../static/js/core/navigation.js" defer></script>
+<script src="../static/js/core/notifications.js" defer></script>
+<script src="../static/js/admin/pickups.js" defer></script>
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profile · SWACHH VATIKA</title>
+
+<link rel="stylesheet" href="../static/css/variables.css">
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/layout.css">
+<link rel="stylesheet" href="../static/css/components.css">
+<link rel="stylesheet" href="../static/css/forms.css">
+<link rel="stylesheet" href="../static/css/tables.css">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="../static/css/chat.css">
+<link rel="stylesheet" href="../static/css/map.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+<link rel="stylesheet" href="../static/css/citizen.css">
+</head>
+<body data-v="" data-role="citizen">
+
+
+<div class="fx" aria-hidden="true"><u class="bl" style="left:-8%;top:8%"></u><u class="bl b2"></u><i class="lf" style="--x:6%;--s:26px;--o:0.5;--d:26s;--dl:-3s"></i><i class="lf" style="--x:16%;--s:18px;--o:0.35;--d:32s;--dl:-12s"></i><i class="lf" style="--x:28%;--s:34px;--o:0.45;--d:28s;--dl:-20s"></i><i class="lf" style="--x:41%;--s:20px;--o:0.3;--d:36s;--dl:-8s"></i><i class="lf" style="--x:55%;--s:28px;--o:0.5;--d:30s;--dl:-16s"></i><i class="lf" style="--x:68%;--s:16px;--o:0.35;--d:34s;--dl:-24s"></i><i class="lf" style="--x:80%;--s:32px;--o:0.45;--d:27s;--dl:-5s"></i><i class="lf" style="--x:92%;--s:22px;--o:0.3;--d:38s;--dl:-14s"></i><b class="pt" style="left:12%;--dl:-0s"></b><b class="pt" style="left:34%;--dl:-4s"></b><b class="pt" style="left:61%;--dl:-8s"></b><b class="pt" style="left:85%;--dl:-12s"></b></div>
+<header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#123524"/><path d="M9 22c0-8 6-13 15-13 0 9-5 15-13 15l-2 2z" fill="#5fcf80"/></svg>SWACHH<span>VATIKA</span></a>
+<nav id="nav" aria-label="Main"><a href="citizen-dashboard.html"><i>🏠</i><span>Dashboard</span></a><a href="citizen-report-complaint.html"><i>📢</i><span>Report Waste</span></a><a href="citizen-pickup-request.html"><i>🚛</i><span>Request Pickup</span></a><a href="citizen-complaints.html"><i>📋</i><span>My Complaints</span></a><a href="citizen-wallet.html"><i>🪙</i><span>SwachhTokens</span></a><details class="more on"><summary><i>⋯</i><span>More</span></summary><div class="menu"><a href="citizen-pickups.html"><i>📦</i><span>My Pickups</span></a><a href="citizen-notifications.html"><i>🔔</i><span>Notifications</span></a><a href="citizen-chat.html"><i>🤖</i><span>AI Assistant</span></a><a href="citizen-profile.html" class="on" aria-current="page"><i>👤</i><span>Profile</span></a></div></details></nav>
+<div class="rt"><button id="lb" type="button" title="Language" data-action="toggle-language">हिं</button><span id="usr" class="tag" data-current-user></span><button id="lg" type="button" data-action="logout">Logout</button></div></header>
+<main id="app-content">
+<h2>Profile</h2><p class="sub">Manage your account details.</p><form class="card" id="profile-form"><label>Name *<input id="full_name" name="full_name" type="text" required ></label><label>Email (read-only)<input id="email" name="email" type="email" readonly disabled></label><label>Phone<input id="phone" name="phone" type="tel" ></label><label>Address<textarea id="address" name="address" rows="2"></textarea></label><label>City<input id="city" name="city" type="text" ></label><label>Ward<select id="ward_id" name="ward_id"><option value="">Select ward</option></select></label><label class="drop">📷 Profile image<input id="profile_image" name="profile_image" type="file" accept="image/jpeg,image/png,image/webp"></label><img class="thumb" id="profile_image-preview" alt="Preview" hidden><p class="err" id="form-error" role="alert"></p><button type="submit" class="p">Save changes</button></form>
+</main>
+<div id="toast" role="status"></div>
+<div id="loading-overlay" aria-hidden="true"><span class="spin"></span></div>
+<script src="../static/js/core/utils.js" defer></script>
+<script src="../static/js/core/api.js" defer></script>
+<script src="../static/js/core/auth.js" defer></script>
+<script src="../static/js/core/navigation.js" defer></script>
+<script src="../static/js/core/notifications.js" defer></script>
+<script src="../static/js/citizen/profile.js" defer></script>
+</body></html>

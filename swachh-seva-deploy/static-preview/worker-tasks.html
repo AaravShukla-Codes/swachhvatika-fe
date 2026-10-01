@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assigned Tasks · SWACHH VATIKA</title>
+
+<link rel="stylesheet" href="../static/css/variables.css">
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/layout.css">
+<link rel="stylesheet" href="../static/css/components.css">
+<link rel="stylesheet" href="../static/css/forms.css">
+<link rel="stylesheet" href="../static/css/tables.css">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="../static/css/chat.css">
+<link rel="stylesheet" href="../static/css/map.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+<link rel="stylesheet" href="../static/css/worker.css">
+</head>
+<body data-v="" data-role="worker">
+
+
+<div class="fx" aria-hidden="true"><u class="bl" style="left:-8%;top:8%"></u><u class="bl b2"></u><i class="lf" style="--x:6%;--s:26px;--o:0.5;--d:26s;--dl:-3s"></i><i class="lf" style="--x:16%;--s:18px;--o:0.35;--d:32s;--dl:-12s"></i><i class="lf" style="--x:28%;--s:34px;--o:0.45;--d:28s;--dl:-20s"></i><i class="lf" style="--x:41%;--s:20px;--o:0.3;--d:36s;--dl:-8s"></i><i class="lf" style="--x:55%;--s:28px;--o:0.5;--d:30s;--dl:-16s"></i><i class="lf" style="--x:68%;--s:16px;--o:0.35;--d:34s;--dl:-24s"></i><i class="lf" style="--x:80%;--s:32px;--o:0.45;--d:27s;--dl:-5s"></i><i class="lf" style="--x:92%;--s:22px;--o:0.3;--d:38s;--dl:-14s"></i><b class="pt" style="left:12%;--dl:-0s"></b><b class="pt" style="left:34%;--dl:-4s"></b><b class="pt" style="left:61%;--dl:-8s"></b><b class="pt" style="left:85%;--dl:-12s"></b></div>
+<header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#123524"/><path d="M9 22c0-8 6-13 15-13 0 9-5 15-13 15l-2 2z" fill="#5fcf80"/></svg>SWACHH<span>VATIKA</span></a>
+<nav id="nav" aria-label="Main"><a href="worker-dashboard.html"><i>🏠</i><span>Dashboard</span></a><a href="worker-tasks.html" class="on" aria-current="page"><i>🧑‍🔧</i><span>Assigned Tasks</span></a><a href="worker-task-history.html"><i>✅</i><span>Task History</span></a><a href="worker-profile.html"><i>👤</i><span>Profile</span></a></nav>
+<div class="rt"><button id="lb" type="button" title="Language" data-action="toggle-language">हिं</button><span id="usr" class="tag" data-current-user></span><button id="lg" type="button" data-action="logout">Logout</button></div></header>
+<main id="app-content">
+<h2>Assigned Tasks</h2><div class="act" id="task-filters" role="group" aria-label="Filter tasks"><button type="button" data-filter="">All</button><button type="button" data-filter="ASSIGNED">Assigned</button><button type="button" data-filter="ACCEPTED">Accepted</button><button type="button" data-filter="IN_PROGRESS">In Progress</button><button type="button" data-filter="COMPLETED">Completed</button></div><div class="stack" id="tasks-list"></div><div class="card empty" id="tasks-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="tasks-empty" data-state="empty" hidden><span class="ic">🌿</span><p>No tasks assigned.</p></div><div class="card empty" id="tasks-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div><nav class="pager" id="tasks-pager" aria-label="Pagination"><button type="button" data-page="prev">Previous</button><span data-page-info>Page 1</span><button type="button" data-page="next">Next</button></nav><template id="task-card-template"><div class="card stop"><div class="sn" data-field="index"></div><div class="sb"><div class="ch"><b data-field="id"></b><span class="tag" data-field="status"></span></div><p data-field="type"></p><p>📍 <span data-field="location"></span></p><small data-field="assigned_at"></small><div class="act"><a class="btn p" data-field="link">View</a></div></div></div></template>
+</main>
+<div id="toast" role="status"></div>
+<div id="loading-overlay" aria-hidden="true"><span class="spin"></span></div>
+<script src="../static/js/core/utils.js" defer></script>
+<script src="../static/js/core/api.js" defer></script>
+<script src="../static/js/core/auth.js" defer></script>
+<script src="../static/js/core/navigation.js" defer></script>
+<script src="../static/js/core/notifications.js" defer></script>
+<script src="../static/js/worker/tasks.js" defer></script>
+</body></html>

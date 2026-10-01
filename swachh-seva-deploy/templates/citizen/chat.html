@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'citizen' %}{% set active = 'chat' %}
+{% block title %}AI Assistant{% endblock %}
+{% block content %}
+<h2>AI Assistant</h2><p class="sub">Ask about reports, pickups and your tokens.</p><div class="chat"><aside class="card"><button type="button" class="p" id="new-conversation" data-action="new-conversation">＋ New chat</button><div class="stack" id="conversation-list"></div></aside><section class="card"><h3>Swachh-Seva AI Assistant</h3><div class="chat-msgs" id="chat-messages" aria-live="polite"><p class="empty" id="chat-empty">Ask a question to get started.</p></div><form class="chat-form" id="chat-form"><input id="chat-input" name="message" placeholder="Type message..." autocomplete="off" required aria-label="Message"><button class="p" type="submit" id="chat-send">Send</button></form><p class="err" id="chat-error" role="alert"></p></section></div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/citizen/chat.js') }}" defer></script>{% endblock %}

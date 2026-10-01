@@ -1,0 +1,18 @@
+.tbl{width:100%;border-collapse:collapse;font-size:14px}.tbl th,.tbl td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}.tbl th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--forest);background:var(--mint2);white-space:nowrap}.tbl tbody tr:hover{background:var(--mint2)}
+
+/* ===== Tables completion ===== */
+body[data-role] .card.ov{padding:0;border-radius:var(--r-md);-webkit-overflow-scrolling:touch}
+body[data-role] .tbl{min-width:560px}
+body[data-role] .tbl th:first-child,body[data-role] .tbl td:first-child{padding-left:var(--sp-4)}
+body[data-role] .tbl th:last-child,body[data-role] .tbl td:last-child{padding-right:var(--sp-4)}
+body[data-role] .tbl thead th{position:sticky;top:0;border-bottom:2px solid var(--line)}
+body[data-role] .tbl td{color:var(--char)}
+body[data-role] .tbl tbody tr:last-child td{border-bottom:0}
+body[data-role] .tbl tbody tr:nth-child(even){background:rgba(243,251,244,.6)}
+body[data-role] .tbl tbody tr:hover{background:var(--mint)}
+body[data-role] .tbl td .tag{font-size:11px}
+body[data-role] .tbl td a,body[data-role] .tbl td button{min-height:34px;padding:5px 12px;font-size:var(--fs-sm)}
+body[data-role] .tbl td a.btn{min-height:34px;padding:5px 12px}
+body[data-role] .tbl td img{max-width:56px;max-height:56px;border-radius:var(--r-sm);object-fit:cover;vertical-align:middle}
+body[data-role] .tbl .num,body[data-role] .tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+body[data-role] .tbl caption{padding:var(--sp-3);text-align:left;font-weight:700}

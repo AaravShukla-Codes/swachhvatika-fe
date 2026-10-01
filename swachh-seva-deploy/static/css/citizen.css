@@ -1,0 +1,72 @@
+/* ===== Citizen: friendly, simple, action-oriented ===== */
+body[data-role=citizen] main>h2{font-size:clamp(24px,3.6vw,34px)}
+body[data-role=citizen] main>.sub{margin:0 0 var(--sp-4);font-size:var(--fs-lg)}
+
+/* Welcome + dashboard */
+body[data-role=citizen] .wel h2{font-size:clamp(24px,4vw,36px);line-height:1.15}
+body[data-role=citizen] .wel small{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:var(--r-pill);padding:4px 12px;box-shadow:var(--sd-sm)}
+body[data-role=citizen] .bento .card.s4>.ar,body[data-role=citizen] .bento .card.s8>.ar{margin-top:var(--sp-3)}
+body[data-role=citizen] .bento .card.click.s4{display:flex;flex-direction:column}
+body[data-role=citizen] .bento .card.click.s4 .ar{margin-top:auto}
+body[data-role=citizen] .bento .card.s4:not(.click):not(.wal){background:var(--cream)}
+
+/* Lists: complaints, pickups, transactions, recent activity */
+body[data-role=citizen] #complaints-list>.card,
+body[data-role=citizen] #pickups-list>.card,
+body[data-role=citizen] #recent-complaints-list>.card,
+body[data-role=citizen] #transactions-list>.card{display:flex;align-items:center;flex-wrap:wrap;gap:var(--sp-2) var(--sp-3);padding:var(--sp-3) var(--sp-4);border-left:5px solid var(--leaf)}
+body[data-role=citizen] #complaints-list>.card>.btn,
+body[data-role=citizen] #pickups-list>.card>.btn{margin-left:auto}
+body[data-role=citizen] #complaints-list>.card>p,
+body[data-role=citizen] #pickups-list>.card>p{flex-basis:100%;margin:0;order:5}
+body[data-role=citizen] #complaints-list .card:hover,
+body[data-role=citizen] #pickups-list .card:hover{transform:translateY(-2px);box-shadow:var(--sd-lg)}
+
+/* Complaint detail */
+body[data-role=citizen] #complaint-info{background:linear-gradient(180deg,#fff,var(--mint2))}
+body[data-role=citizen] #complaint-info .row b{max-width:65%}
+body[data-role=citizen] #complaint-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:var(--sp-2);margin-top:var(--sp-3)}
+body[data-role=citizen] #complaint-images img{width:100%;height:120px;object-fit:cover;border-radius:var(--r-md);border:1.5px solid var(--line)}
+body[data-role=citizen] #complaint-timeline{margin:var(--sp-1) 0 0}
+
+/* Report / pickup forms */
+body[data-role=citizen] form.card:not(.fbar){max-width:720px;padding:var(--sp-5);background:linear-gradient(180deg,#fff,var(--mint2) 220%)}
+body[data-role=citizen] #complaint-form .card.b button{margin-bottom:var(--sp-2)}
+body[data-role=citizen] #complaint-form .card.b label{margin-top:var(--sp-1)}
+body[data-role=citizen] #submit-result{max-width:720px;margin-top:var(--sp-4);background:var(--ok-bg);border-color:var(--ok-line);display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);flex-wrap:wrap}
+body[data-role=citizen] #submit-result[hidden]{display:none}
+body[data-role=citizen] #submit-result p{margin:0}
+body[data-role=citizen] #location-msg:empty{display:none}
+
+/* Wallet: premium + reward-focused */
+body[data-role=citizen] .wal.w2{padding:var(--sp-6) var(--sp-5);border-radius:28px;min-height:230px;box-shadow:0 24px 40px -22px rgba(18,53,36,.75)}
+body[data-role=citizen] .wal.w2::after{content:"🪙";position:absolute;right:18px;bottom:-26px;font-size:150px;opacity:.14;transform:rotate(-14deg);pointer-events:none}
+body[data-role=citizen] .wal .bal{font-size:clamp(52px,9vw,84px)}
+body[data-role=citizen] .wal .wl span{font-size:var(--fs-md);backdrop-filter:blur(4px)}
+body[data-role=citizen] .wal .chain span{font-weight:650;padding:4px 12px}
+body[data-role=citizen] .wal>small{font-size:var(--fs-xs)}
+body[data-role=citizen] main>h3{display:flex;align-items:center;gap:var(--sp-2)}
+body[data-role=citizen] main>h3::before{content:"";width:6px;height:20px;border-radius:4px;background:var(--leaf)}
+body[data-role=citizen] main>label{max-width:260px;margin:var(--sp-2) 0 var(--sp-3)}
+body[data-role=citizen] #transactions-list>.card{border-left-color:var(--leaf);background:#fff}
+body[data-role=citizen] #transactions-list>.card:has(.dn,.spend,[data-type=SPEND]){border-left-color:var(--red)}
+body[data-role=citizen] #transactions-list .up{color:var(--leafd);font-weight:800}
+body[data-role=citizen] #transactions-list .dn{color:var(--red);font-weight:800}
+body[data-role=citizen] main>.tag:first-of-type{margin-bottom:var(--sp-2)}
+
+/* Notifications + profile */
+body[data-role=citizen] #notifications-list:not(:empty){display:grid;gap:var(--sp-2)}
+body[data-role=citizen] #notifications-list .notif{margin:0}
+body[data-role=citizen] #profile-form img.thumb,body[data-role=citizen] #profile_image-preview{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--leaf)}
+body[data-role=citizen] #profile-form{display:block}
+
+@media(max-width:700px){
+body[data-role=citizen] form.card{padding:var(--sp-4)}
+body[data-role=citizen] #complaints-list>.card>.btn,body[data-role=citizen] #pickups-list>.card>.btn{margin-left:0;width:100%}
+body[data-role=citizen] .wal.w2{padding:var(--sp-5) var(--sp-4);min-height:200px}
+body[data-role=citizen] #complaint-info .row b{max-width:58%}
+}
+body[data-role=citizen] .fbar{max-width:none}
+body[data-role=citizen] .ops{margin:0 0 var(--sp-3)}
+body[data-role=citizen] .ops span:empty{display:none}
+body[data-role=citizen] .ops{justify-content:flex-end}

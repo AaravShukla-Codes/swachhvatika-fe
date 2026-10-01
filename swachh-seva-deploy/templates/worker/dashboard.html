@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'worker' %}{% set active = 'dashboard' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="ops"><div><h2 style="margin:0">Worker Dashboard</h2><small>Today's tasks</small></div><span class="tag ok"><i class="live"></i>On duty</span></div><div class="kgrid"><div class="card kpi "><span class="ic">📅</span><div class="big" data-kpi="today">—</div><small>Today's Tasks</small></div><div class="card kpi warn"><span class="ic">⏳</span><div class="big" data-kpi="pending">—</div><small>Pending</small></div><div class="card kpi "><span class="ic">🚧</span><div class="big" data-kpi="in_progress">—</div><small>In Progress</small></div><div class="card kpi ok"><span class="ic">✅</span><div class="big" data-kpi="completed">—</div><small>Completed</small></div></div><a class="btn p cta" href="/worker/tasks">View Assigned Tasks <em>→</em></a>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/worker/dashboard.js') }}" defer></script>{% endblock %}

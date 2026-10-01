@@ -1,0 +1,32 @@
+input,select,textarea{width:100%;min-width:0;font:inherit;color:var(--char);background:var(--mint2);border:1.5px solid transparent;border-radius:12px;padding:11px 12px;margin:5px 0 12px;box-shadow:inset 2px 2px 5px #d5e6d9,inset -2px -2px 5px #fff;transition:border-color .2s,box-shadow .2s,background .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--leaf);background:#fff;box-shadow:0 0 0 4px rgba(47,158,87,.18)}
+label{display:block;font-weight:650;font-size:13px;color:var(--forest)}
+.drop{border:2px dashed #a9cfb1;border-radius:16px;padding:14px;background:var(--mint2);cursor:pointer}
+.drop input{background:none;box-shadow:none;margin:8px 0 0;padding:0}
+
+/* ===== Forms completion ===== */
+body[data-role] form>label,body[data-role] form>.card>label{margin-bottom:var(--sp-1)}
+body[data-role] label:has(>input[type=checkbox]),body[data-role] label:has(>input[type=radio]){display:flex;align-items:center;gap:var(--sp-2)}
+body[data-role] input[type=checkbox],body[data-role] input[type=radio]{width:18px;height:18px;margin:0;padding:0;accent-color:var(--leaf);box-shadow:none}
+body[data-role] input[type=number]{-moz-appearance:textfield}
+body[data-role] input[type=search]{-webkit-appearance:none;appearance:none}
+body[data-role] input[type=date]{min-height:44px}
+body[data-role] input[readonly],body[data-role] input:disabled,body[data-role] select:disabled,body[data-role] textarea:disabled{opacity:.7;cursor:not-allowed;background:#e8f1ea;box-shadow:none}
+body[data-role] select{appearance:none;-webkit-appearance:none;padding-right:34px;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--forest) 50%),linear-gradient(135deg,var(--forest) 50%,transparent 50%);background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+body[data-role] select:focus{background-color:#fff}
+body[data-role] textarea{min-height:84px;resize:vertical;line-height:1.5}
+body[data-role] input[aria-invalid=true],body[data-role] input:user-invalid,body[data-role] select:user-invalid,body[data-role] textarea:user-invalid{border-color:var(--red);background:var(--red-bg)}
+body[data-role] input[type=file]{font-size:var(--fs-sm);cursor:pointer}
+body[data-role] input[type=file]::file-selector-button{font:inherit;font-weight:700;font-size:var(--fs-sm);border:1.5px solid var(--line2);border-radius:var(--r-sm);background:#fff;color:var(--forest);padding:6px 12px;margin-right:var(--sp-3);cursor:pointer}
+body[data-role] .drop{display:block;font-weight:700;transition:background .2s,border-color .2s}
+body[data-role] .drop:hover,body[data-role] .drop:focus-within{border-color:var(--leaf);background:var(--mint)}
+body[data-role] form>button,body[data-role] form>.act,body[data-role] form>.card+button{margin-top:var(--sp-2)}
+body[data-role] form>button[type=submit]{min-width:140px}
+body[data-role] form .stack{gap:var(--sp-2)}
+body[data-role] form .stack .drop{margin:0}
+body[data-role] .fbar{margin-bottom:var(--sp-4);padding:var(--sp-4)}
+body[data-role] .fbar label{margin:0}
+body[data-role] .fbar button{align-self:end;min-height:44px}
+body[data-role] .fbar input,body[data-role] .fbar select{background-color:#fff;border-color:var(--line)}
+body[data-role] .fbar input:focus,body[data-role] .fbar select:focus{border-color:var(--leaf)}
+body[data-role] .card>form>label:last-of-type,body[data-role] .card>form>.err+button{margin-bottom:0}

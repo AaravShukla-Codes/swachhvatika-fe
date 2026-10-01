@@ -1,0 +1,16 @@
+:root{--forest:#123524;--leaf:#2f9e57;--leafd:#217a42;--mint:#e6f6e9;--mint2:#f3fbf4;--cream:#fbf8ec;--char:#22302a;--line:#d2e6d6;--red:#d4553f;--ink:#22302a;--bg:#eaf6ec;--card:#fff;--g:#2f9e57;--sh:#d5e8d9;--wh:#fff;--r:22px;--sd:0 1px 0 #fff inset,0 12px 28px -16px rgba(18,53,36,.35),0 2px 6px rgba(18,53,36,.06);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+/* ===== Design tokens (extends index.html palette) ===== */
+:root{
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;
+--r-sm:10px;--r-md:14px;--r-lg:22px;--r-pill:99px;
+--fs-xs:12px;--fs-sm:13px;--fs-md:15px;--fs-lg:17px;
+--amber:#b7791f;--amber-bg:#fdf3d8;--amber-line:#f0dc9c;
+--red-bg:#fde9e5;--red-line:#f4c3b9;--blue:#2b6cb0;--blue-bg:#e4f0fb;--blue-line:#bcd7f0;
+--ok-bg:#d9f2df;--ok-line:#b5e2c0;
+--muted:#5c7365;--line2:#bcd9c2;
+--sd-sm:0 1px 2px rgba(18,53,36,.08);--sd-lg:0 1px 0 #fff inset,0 18px 32px -16px rgba(18,53,36,.4);
+--hard:3px 3px 0 var(--forest);
+--ease:cubic-bezier(.2,.8,.2,1);
+--gap:14px;
+}

@@ -1,0 +1,26 @@
+.auth-wrap{max-width:440px;margin:24px auto}
+
+/* ===== Auth (also loaded for public role, incl. error pages): minimal + welcoming ===== */
+.auth-wrap{position:relative;margin:clamp(16px,6vh,56px) auto}
+.auth-wrap::before{content:"";position:absolute;inset:-14px 4px auto auto;width:120px;height:120px;border-radius:0 100% 0 100%;background:linear-gradient(135deg,#6bd08a,#2f9e57);opacity:.25;transform:rotate(12deg);z-index:0;pointer-events:none}
+.auth-wrap .card{z-index:1;padding:var(--sp-6) var(--sp-5);border-radius:28px;border:1.5px solid var(--forest);box-shadow:6px 6px 0 var(--forest),var(--sd)}
+.auth-wrap .card:hover{transform:none}
+.auth-wrap h3{font-size:clamp(24px,4vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:var(--sp-4)}
+.auth-wrap h3::after{content:"";display:block;width:44px;height:4px;border-radius:4px;background:var(--leaf);margin-top:var(--sp-2)}
+.auth-wrap form>label{margin-bottom:var(--sp-2)}
+.auth-wrap form>button[type=submit],.auth-wrap form>button.p{width:100%;min-height:48px;margin-top:var(--sp-2)}
+.auth-wrap p{margin:var(--sp-3) 0 0}
+.auth-wrap p>button[disabled]{width:100%;background:var(--mint2);border-style:dashed;color:var(--muted);font-weight:650;font-size:var(--fs-sm)}
+.auth-wrap small{opacity:1;color:var(--muted);display:block;text-align:center}
+.auth-wrap small a{font-weight:750}
+.auth-wrap .err{margin-top:0}
+.auth-wrap .err:empty{display:none}
+
+/* Error pages (public role, no .auth-wrap) */
+main>.card.empty:only-child{max-width:520px;margin:clamp(24px,10vh,96px) auto;padding:var(--sp-6) var(--sp-5);border-style:solid;border-radius:28px;background:#fff;box-shadow:var(--sd)}
+main>.card.empty:only-child h2{margin:var(--sp-2) 0 0}
+main>.card.empty:only-child .ic{width:72px;height:72px;font-size:38px;border-radius:50%;background:var(--mint)}
+main>.card.empty:only-child p{color:var(--muted)}
+main>.card.empty:only-child .btn{margin-top:var(--sp-3)}
+
+@media(max-width:430px){.auth-wrap .card{padding:var(--sp-5) var(--sp-4);border-radius:22px;box-shadow:4px 4px 0 var(--forest),var(--sd)}}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard · SWACHH VATIKA</title>
+
+<link rel="stylesheet" href="../static/css/variables.css">
+<link rel="stylesheet" href="../static/css/base.css">
+<link rel="stylesheet" href="../static/css/layout.css">
+<link rel="stylesheet" href="../static/css/components.css">
+<link rel="stylesheet" href="../static/css/forms.css">
+<link rel="stylesheet" href="../static/css/tables.css">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="../static/css/chat.css">
+<link rel="stylesheet" href="../static/css/map.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+<link rel="stylesheet" href="../static/css/citizen.css">
+</head>
+<body data-v="" data-role="citizen">
+
+
+<div class="fx" aria-hidden="true"><u class="bl" style="left:-8%;top:8%"></u><u class="bl b2"></u><i class="lf" style="--x:6%;--s:26px;--o:0.5;--d:26s;--dl:-3s"></i><i class="lf" style="--x:16%;--s:18px;--o:0.35;--d:32s;--dl:-12s"></i><i class="lf" style="--x:28%;--s:34px;--o:0.45;--d:28s;--dl:-20s"></i><i class="lf" style="--x:41%;--s:20px;--o:0.3;--d:36s;--dl:-8s"></i><i class="lf" style="--x:55%;--s:28px;--o:0.5;--d:30s;--dl:-16s"></i><i class="lf" style="--x:68%;--s:16px;--o:0.35;--d:34s;--dl:-24s"></i><i class="lf" style="--x:80%;--s:32px;--o:0.45;--d:27s;--dl:-5s"></i><i class="lf" style="--x:92%;--s:22px;--o:0.3;--d:38s;--dl:-14s"></i><b class="pt" style="left:12%;--dl:-0s"></b><b class="pt" style="left:34%;--dl:-4s"></b><b class="pt" style="left:61%;--dl:-8s"></b><b class="pt" style="left:85%;--dl:-12s"></b></div>
+<header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#123524"/><path d="M9 22c0-8 6-13 15-13 0 9-5 15-13 15l-2 2z" fill="#5fcf80"/></svg>SWACHH<span>VATIKA</span></a>
+<nav id="nav" aria-label="Main"><a href="citizen-dashboard.html" class="on" aria-current="page"><i>🏠</i><span>Dashboard</span></a><a href="citizen-report-complaint.html"><i>📢</i><span>Report Waste</span></a><a href="citizen-pickup-request.html"><i>🚛</i><span>Request Pickup</span></a><a href="citizen-complaints.html"><i>📋</i><span>My Complaints</span></a><a href="citizen-wallet.html"><i>🪙</i><span>SwachhTokens</span></a><details class="more"><summary><i>⋯</i><span>More</span></summary><div class="menu"><a href="citizen-pickups.html"><i>📦</i><span>My Pickups</span></a><a href="citizen-notifications.html"><i>🔔</i><span>Notifications</span></a><a href="citizen-chat.html"><i>🤖</i><span>AI Assistant</span></a><a href="citizen-profile.html"><i>👤</i><span>Profile</span></a></div></details></nav>
+<div class="rt"><button id="lb" type="button" title="Language" data-action="toggle-language">हिं</button><span id="usr" class="tag" data-current-user></span><button id="lg" type="button" data-action="logout">Logout</button></div></header>
+<main id="app-content">
+<section class="wel"><div><small>Welcome, <span data-user-name>…</span> 👋</small><h2>Let's keep your community cleaner today.</h2></div></section><div class="bento"><a class="card click rep s6" href="citizen-report-complaint.html"><i class="deco">♻</i><span class="tag">📢 Report Waste</span><h3 class="lg">See waste?<br>Report it.</h3><p>Snap it, submit it and follow it until it's resolved.</p><b class="cta">Report now <em>→</em></b></a><div class="card wal s6"><div class="bal" data-wallet="balance">—</div><small>SWACHH TOKENS</small><div class="wl"><span class="up">+<b data-wallet="lifetime_earned">0</b> Earned</span><span class="dn">−<b data-wallet="lifetime_spent">0</b> Spent</span></div><a class="ar" href="citizen-wallet.html">Open Wallet <em>→</em></a></div><a class="card click s4" href="citizen-pickup-request.html"><span class="ic">🚛</span><h3>Request Pickup</h3><p>Book a waste pickup.</p><b class="ar">Open <em>→</em></b></a><div class="card s8"><h3>My Reports</h3><div class="row"><span>Total</span><b data-summary="complaint_total">0</b></div><div class="row"><span>Active</span><b data-summary="complaint_open">0</b></div><div class="row"><span>Resolved</span><b data-summary="complaint_resolved">0</b></div><a class="ar" href="citizen-complaints.html">View My Complaints <em>→</em></a></div><div class="card s4"><h3>My Pickups</h3><div class="row"><span>Total</span><b data-summary="pickup_total">0</b></div><div class="row"><span>Completed</span><b data-summary="pickup_completed">0</b></div><a class="ar" href="citizen-pickups.html">View pickups <em>→</em></a></div><a class="card click s4" href="citizen-chat.html"><span class="ic">🤖</span><h3>Ask AI Assistant</h3><p>Get help with reports and pickups.</p><b class="ar">Open <em>→</em></b></a><div class="card s8"><h3>Recent activity</h3><div class="stack" id="recent-complaints-list"></div><div class="card empty" id="recent-complaints-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="recent-complaints-empty" data-state="empty" hidden><span class="ic">🌿</span><p>No complaints yet.</p><a class="btn p" href="citizen-report-complaint.html">Report Waste</a></div><div class="card empty" id="recent-complaints-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div></div><div class="card s4"><h3>Recent notifications</h3><div class="stack" id="recent-notifications-list"></div><div class="card empty" id="recent-notifications-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="recent-notifications-empty" data-state="empty" hidden><span class="ic">🌿</span><p>You're all caught up.</p></div><div class="card empty" id="recent-notifications-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div></div></div>
+</main>
+<div id="toast" role="status"></div>
+<div id="loading-overlay" aria-hidden="true"><span class="spin"></span></div>
+<script src="../static/js/core/utils.js" defer></script>
+<script src="../static/js/core/api.js" defer></script>
+<script src="../static/js/core/auth.js" defer></script>
+<script src="../static/js/core/navigation.js" defer></script>
+<script src="../static/js/core/notifications.js" defer></script>
+<script src="../static/js/citizen/dashboard.js" defer></script>
+</body></html>

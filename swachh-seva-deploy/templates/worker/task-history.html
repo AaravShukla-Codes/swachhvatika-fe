@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'worker' %}{% set active = 'history' %}
+{% block title %}Task History{% endblock %}
+{% block content %}
+<h2>Task History</h2><p class="sub">Tasks you have completed.</p><div class="stack" id="history-list"></div><div class="card empty" id="history-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="history-empty" data-state="empty" hidden><span class="ic">🌿</span><p>No completed tasks yet.</p></div><div class="card empty" id="history-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div><nav class="pager" id="history-pager" aria-label="Pagination"><button type="button" data-page="prev">Previous</button><span data-page-info>Page 1</span><button type="button" data-page="next">Next</button></nav>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/worker/task-history.js') }}" defer></script>{% endblock %}

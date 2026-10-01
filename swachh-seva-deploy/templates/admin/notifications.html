@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'admin' %}{% set active = 'notifications' %}{% set body_v = 'admin' %}
+{% block title %}Notifications{% endblock %}
+{% block content %}
+<div class="adm-h"><div><small>System events</small><h2>Notifications</h2></div><span class="tag ok"><i class="live"></i>Live</span></div><div class="ops"><span></span><button type="button" data-action="read-all">Mark all as read</button></div><div class="card" id="notifications-list"></div><div class="card empty" id="notifications-loading" data-state="loading"><span class="spin" aria-hidden="true"></span><p>Loading…</p></div><div class="card empty" id="notifications-empty" data-state="empty" hidden><span class="ic">🌿</span><p>You're all caught up.</p></div><div class="card empty" id="notifications-error" data-state="error" hidden><p>Unable to load. Please try again.</p><button type="button" data-action="retry">Retry</button></div><nav class="pager" id="notifications-pager" aria-label="Pagination"><button type="button" data-page="prev">Previous</button><span data-page-info>Page 1</span><button type="button" data-page="next">Next</button></nav>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/admin/notifications.js') }}" defer></script>{% endblock %}

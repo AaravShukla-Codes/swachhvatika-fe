@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'citizen' %}{% set active = 'profile' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<h2>Profile</h2><p class="sub">Manage your account details.</p><form class="card" id="profile-form"><label>Name *<input id="full_name" name="full_name" type="text" required ></label><label>Email (read-only)<input id="email" name="email" type="email" readonly disabled></label><label>Phone<input id="phone" name="phone" type="tel" ></label><label>Address<textarea id="address" name="address" rows="2"></textarea></label><label>City<input id="city" name="city" type="text" ></label><label>Ward<select id="ward_id" name="ward_id"><option value="">Select ward</option></select></label><label class="drop">📷 Profile image<input id="profile_image" name="profile_image" type="file" accept="image/jpeg,image/png,image/webp"></label><img class="thumb" id="profile_image-preview" alt="Preview" hidden><p class="err" id="form-error" role="alert"></p><button type="submit" class="p">Save changes</button></form>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/citizen/profile.js') }}" defer></script>{% endblock %}

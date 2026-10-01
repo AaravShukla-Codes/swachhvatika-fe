@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% set role = 'public' %}{% set active = 'register' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<section class="auth-wrap"><div class="card"><h3>Register</h3><form id="auth-form"><label>Full name *<input id="full_name" name="full_name" type="text" required ></label><label>Email *<input id="email" name="email" type="email" required ></label><label>Phone<input id="phone" name="phone" type="tel" ></label><label>Password *<input id="password" name="password" type="password" required autocomplete="new-password"></label><p class="err" id="form-error" role="alert"></p><button type="submit" class="p">Register</button></form><p><button type="button" disabled>Aadhaar Login — Future Integration</button></p><p><small>Already registered? <a href="/login">Login</a></small></p></div></section>
+{% endblock %}

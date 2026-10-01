@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% set role = 'citizen' %}{% set active = 'pickup' %}
+{% block title %}Request Pickup{% endblock %}
+{% block content %}
+<h2>Request Pickup</h2><p class="sub">Book a doorstep waste pickup.</p><form class="card" id="pickup-form"><label>Waste type *<select id="waste_type" name="waste_type" required><option value="">Select type</option><option value="WET">Wet</option><option value="DRY">Dry</option><option value="E_WASTE">E-waste</option><option value="HAZARDOUS">Hazardous</option><option value="RECYCLABLE">Recyclable</option></select></label><label>Description<textarea id="description" name="description" rows="3"></textarea></label><div class="card b"><h3>Location</h3><button type="button" id="use-location" data-action="use-location">📍 Use My Location</button><p class="err" id="location-msg" role="alert"></p><label>Latitude<input id="latitude" name="latitude" type="number" step="any" min="-90" max="90"></label><label>Longitude<input id="longitude" name="longitude" type="number" step="any" min="-180" max="180"></label><label>Address<textarea id="address" name="address" rows="2"></textarea></label></div><label>Preferred date<input id="preferred_date" name="preferred_date" type="date" ></label><p class="err" id="form-error" role="alert"></p><button type="submit" class="p cta" id="submit-btn">Submit <em>→</em></button></form>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/citizen/pickup-request.js') }}" defer></script>{% endblock %}

@@ -1,0 +1,73 @@
+body[data-v=admin]{background:#e9efeb}
+body[data-v=admin] .card{border-radius:14px;box-shadow:0 1px 3px rgba(18,53,36,.12);border-color:#cfdad3}
+
+/* ===== Admin: data-focused, professional ===== */
+body[data-v=admin]{background:radial-gradient(900px 500px at 90% -10%,#d7e8dd,transparent 60%),#e9efeb;background-attachment:fixed}
+body[data-v=admin] main{max-width:1240px}
+body[data-v=admin] header{max-width:1240px;border-radius:16px}
+body[data-v=admin] .fx{opacity:.35}
+body[data-v=admin] .card{background:#fff;padding:var(--sp-4);transition:box-shadow .2s}
+body[data-v=admin] .card:hover{transform:none}
+body[data-v=admin] .card.b{background:#f4f9f5}
+body[data-v=admin] h3{font-size:16px;text-transform:none;letter-spacing:-.01em;padding-bottom:var(--sp-2);margin-bottom:var(--sp-3);border-bottom:1px solid var(--line)}
+body[data-v=admin] .card.empty h3,body[data-v=admin] .kpi h3{border:0;padding:0}
+body[data-v=admin] main>h3{border:0;padding:0;margin:var(--sp-5) 0 var(--sp-3)}
+body[data-v=admin] .adm-h h2{font-size:clamp(22px,3vw,28px);letter-spacing:-.02em}
+
+/* KPI tiles */
+body[data-v=admin] .kgrid{grid-template-columns:repeat(5,1fr);gap:var(--sp-3)}
+body[data-v=admin] .kpi{padding:var(--sp-3) var(--sp-4);border-radius:12px;border-top:3px solid var(--line);border-bottom:0;flex-direction:column}
+body[data-v=admin] .kpi.warn{border-top-color:#e0b341}
+body[data-v=admin] .kpi.ok{border-top-color:var(--leaf)}
+body[data-v=admin] .kpi .big{font-size:clamp(26px,3vw,34px);font-variant-numeric:tabular-nums}
+body[data-v=admin] .kpi small{font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.05em}
+body[data-v=admin] .kpi .ic{width:34px;height:34px;font-size:17px;border-radius:10px;margin-bottom:6px}
+
+/* Filters + tables */
+body[data-v=admin] .fbar{background:#fff;border-radius:12px}
+body[data-v=admin] .card.ov{border-radius:12px;box-shadow:0 1px 3px rgba(18,53,36,.12)}
+body[data-v=admin] .tbl th{background:#eef5f0;font-size:11px;padding:12px}
+body[data-v=admin] .tbl td{padding:12px}
+body[data-v=admin] .tbl td:first-child{font-weight:700;color:var(--forest);white-space:nowrap}
+body[data-v=admin] .tbl td .btn,body[data-v=admin] .tbl td button{background:#fff}
+body[data-v=admin] .tbl td .btn.p,body[data-v=admin] .tbl td button.p{background:var(--leaf);box-shadow:2px 2px 0 var(--forest)}
+body[data-v=admin] .pager{margin:var(--sp-4) 0 var(--sp-2)}
+
+/* Detail pages */
+body[data-v=admin] #complaint-info .row b,body[data-v=admin] #task-info .row b,body[data-v=admin] #worker-info .row b{max-width:64%}
+body[data-v=admin] #proof-images,body[data-v=admin] #complaint-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--sp-2);margin-bottom:var(--sp-3)}
+body[data-v=admin] #proof-images img,body[data-v=admin] #complaint-images img{width:100%;height:130px;object-fit:cover;border-radius:12px;border:1.5px solid var(--line)}
+body[data-v=admin] #verify-form .act,body[data-v=admin] #review-form .act{margin-top:var(--sp-2)}
+body[data-v=admin] #verify-form textarea{background:#fff;min-height:96px}
+body[data-v=admin] #assign-form,body[data-v=admin] #adjust-form{display:grid;gap:var(--sp-1)}
+body[data-v=admin] .card.b button:not(.p){background:#fff}
+
+/* Analytics charts */
+body[data-v=admin] .cols{height:170px;background:repeating-linear-gradient(0deg,transparent 0,transparent 33px,var(--line) 33px,var(--line) 34px);border-bottom:2px solid #a9cfb1}
+body[data-v=admin] .cols i{background:linear-gradient(#3fb566,var(--leafd))}
+body[data-v=admin] .cols>div:hover i{filter:brightness(1.1)}
+body[data-v=admin] #chart-status i{background:linear-gradient(#5aa8e6,var(--blue))}
+body[data-v=admin] #chart-tokens i{background:linear-gradient(#f0c95a,#c99a2e)}
+body[data-v=admin] #chart-pickups i{background:linear-gradient(#7be09b,#2f9e57)}
+body[data-v=admin] #chart-workers i{background:linear-gradient(#8fa8a0,#4f6b63)}
+
+/* Hotspots + chat + notifications */
+body[data-v=admin] #hotspot-map{height:400px}
+body[data-v=admin] .s4 .row{align-items:center}
+body[data-v=admin] .chat{grid-template-columns:260px 1fr}
+body[data-v=admin] .chat-msgs{max-height:60vh}
+body[data-v=admin] #notifications-list:not(:empty){display:grid;gap:var(--sp-2)}
+body[data-v=admin] .notif{border-radius:12px}
+body[data-v=admin] #audit-table td{font-size:13px}
+body[data-v=admin] #audit-table td:nth-child(n+3){color:var(--muted)}
+body[data-v=admin] #profile-form,body[data-v=admin] form.card:not(.fbar){max-width:640px}
+
+@media(max-width:1180px){body[data-v=admin] .kgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:980px){body[data-v=admin] .kgrid{grid-template-columns:repeat(3,1fr)}body[data-v=admin] .chat{grid-template-columns:200px 1fr}}
+@media(max-width:700px){
+body[data-v=admin] .kgrid{grid-template-columns:repeat(2,1fr)}
+body[data-v=admin] .chat{grid-template-columns:1fr}
+body[data-v=admin] #hotspot-map{height:240px}
+body[data-v=admin] #complaint-info .row b,body[data-v=admin] #task-info .row b{max-width:56%}
+body[data-v=admin] .cols{height:140px}
+}
